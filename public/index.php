@@ -28,4 +28,17 @@
 
 </div>
 
+<div class="card">
+
+    <h2>Nossos Diferenciais</h2>
+
+    <ul>
+        <li>Instrutores especializados</li>
+        <li>Conteúdo atualizado</li>
+        <li>Aprendizado prático</li>
+        <li>Projetos aplicados ao mercado</li>
+    </ul>
+
+</div>
+
 <?php include "../includes/rodape.php"; ?>
