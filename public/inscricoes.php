@@ -35,6 +35,18 @@ if(file_exists($arquivo))
 
 </div>
 
+<?php if(count($inscricoes) == 0): ?>
+
+<div class="card">
+
+    <p>
+        Nenhuma inscrição encontrada.
+    </p>
+
+</div>
+
+<?php endif; ?>
+
 <?php foreach($inscricoes as $inscricao): ?>
 
 <div class="card">

@@ -111,7 +111,7 @@ $novaInscricao = [
 
 $inscricoes[] = $novaInscricao;
 
-file_put_contents(
+$resultadoGravacao = file_put_contents(
     $arquivo,
     json_encode(
         $inscricoes,
@@ -119,6 +119,31 @@ file_put_contents(
         JSON_UNESCAPED_UNICODE
     )
 );
+
+if($resultadoGravacao === false)
+{
+    echo "<div class='card'>";
+
+    echo "<h2>Erro ao salvar inscrição</h2>";
+
+    echo "<p>";
+
+    echo "Não foi possível gravar os dados no arquivo JSON.";
+
+    echo "</p>";
+
+    echo "<a class='botao' href='inscricao.php'>";
+
+    echo "Voltar";
+
+    echo "</a>";
+
+    echo "</div>";
+
+    include "../includes/rodape.php";
+
+    exit;
+}
 
 ?>
 
